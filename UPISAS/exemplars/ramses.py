@@ -16,7 +16,7 @@ class DemoExemplar(Exemplar):
         },
     }
 
-        super().__init__("http://localhost:3000", docker_config, auto_start)
+    super().__init__("http://localhost:3000", docker_config, auto_start)
 
     def start_run(self, app):
         self.exemplar_container.exec_run(cmd = f' sh -c "cd /usr/src/app && node {app}" ', detach=True)
